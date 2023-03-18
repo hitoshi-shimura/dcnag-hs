@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>とりあえずテスト</title>
+    <link rel="stylesheet" href="stylesheet.css">
+<!--- レスポンシブのために記述しておく ---> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+
+</head>
+<body>
+  <header>  
+      <div class="header-logo">Progate</div>
+      <div class="header-list">
+        <ul>
+          <li>プログラミングとは</li>
+          <li>学べるレッスン</li>
+          <li>お問い合わせ</li>
+        </ul>
+      </div>
+
+      <!--        <div class="h-list">
+        <ul class="clearfix">
+            <li>
+                <a href="#si">自己紹介</a>
+            </li>
+            <li>
+                <a href="#sa">実装サンプル</a>
+            </li>
+        </ul>  
+      </div>
+      -->
+    
+
+  </header>
+
+  <div class="container">
+
+    <div class="text-area01">
+      <h1>これはテストです。</h1>
+      <h2>いろいろやってみて確認します。</h2>
+      <h3>そういうことです。</h3>
+    </div>
+
+    <div class="btn01">ブロック１</div>
+    <div class="btn02">ブロック２</div>
+    <div class="btn03">ブロック３</div>
+    <div class="btn04">ブロック４</div>
+
+    <div class="Form-title">
+      <ul>
+        <li>d-career ディーキャリア</li>
+        <li>ITエキスパート名古屋 丸の内オフィス</li>
+        <li>名古屋市中区丸の内２－１７－２２ 丸の内桜通りビル２Ｆ</li>
+      </ul>
+    </div>
+
+
+    <img class="img00" src="images/main_sp.jpg" alt="画像00">
+
+    <div class="img-can">
+      <img class="img01" src="images/gallery01.jpg" alt="画像01">
+      <img class="img02" src="images/gallery02.jpg" alt="画像02"> 
+      <img class="img03" src="images/gallery03.jpg" alt="画像03"> 
+      <img class="img04" src="images/gallery04.jpg" alt="画像04"> 
+    </div>
+
+    <div class="in-block">
+      <div class="btn_blue">青</div>
+      <div class="btn_red" >赤</div>
+    </div>
+
+<!--------------------------------  問合せフォーム　---------------------------------------------------------->
+
+    <div class="Form">
+    
+      <div class="Form-Item">
+        <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>お名前</p>
+        <input type="text" class="Form-Item-Input" placeholder="例）山田太郎">
+      </div>
+    
+      <div class="Form-Item">
+        <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>電話番号</p>
+        <input type="text" class="Form-Item-Input" placeholder="例）000-0000-0000">
+      </div>
+    
+      <div class="Form-Item">
+        <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>メールアドレス</p>
+        <input type="email" class="Form-Item-Input" placeholder="例）example@gmail.com">
+      </div>
+    
+      <div class="Form-Item">
+        <p class="Form-Item-Label isMsg"><span class="Form-Item-Label-Required">必須</span>お問い合わせ内容</p>
+        <textarea class="Form-Item-Textarea"></textarea>
+      </div>
+    
+      <input type="submit" class="Form-Btn" value="送信する">
+    
+    </div>
+
+<!-----------------------   JavaScript button  -------------------------------------------------------->    
+    <h1>JavaScript</h1>
+    <button type="button" onclick="ShowAlart()" class="js-btn01">ここをクリック
+    </button>
+
+<!----------------------------------------------------------------------------------------------------------->
+<script src="test01.js" async></script> 
+
+<!------   直接 HTMLに書き込むなら
+  <script>
+    function ShowAlart() {
+    alert("Hello world!!");
+    }
+  </script>
+------------------------->
+
+
+<div class="blk-end">ブロック一番下</div>  
+
+  </div>
+
+  <footer>
+    <div class="footer-logo">©Copyright 2023 d-career it-expert Nagoya Marunouchi</div>
+  </footer>
+
+  
+
+
+
+</body>
+</html>

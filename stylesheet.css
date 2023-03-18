@@ -1,0 +1,559 @@
+/*========================================    初期化 bgn  ============================================*/
+/* CSSのリセット（消さないでください）                                                               */
+html, body,
+ul, ol, li,
+h1, h2, h3, h4, h5, h6, p,
+form, input, div {
+  margin:  0;
+  padding: 0;
+}
+/*=======================================    初期化 end   ============================================*/
+
+body {
+  width:    auto;
+  height:   auto;  
+  overflow: auto;    /* コンテンツの表示を自動に設定（スクロール） */
+}
+
+/*-----------------------------------------  ヘッダー部分  ------------------------------------------ */
+
+header {
+
+  width : 100%;     /*  width: auto; ではうまくいかない　*/
+  height: 90px;
+
+  position: fixed;  /* ヘッダーを固定する */
+  top:  0;          /* 上部から配置の基準位置を決める */
+  left: 0;          /* 左から配置の基準位置を決める */
+
+  background-color: #26d0c9;
+  color: #fff;
+
+  margin-bottom: 2vh;   /*　header下にスペースを2%程度とる  */
+
+}
+ 
+.header-logo {
+
+  float: left;          /*  左寄せ　*/
+  padding-top: 20px;
+  padding-left: 0.5em;
+  font-size: 35px;
+
+}
+
+.header-list li {
+
+  float: right;         /*  右寄せ　*/
+  padding-top: 35px;
+  padding-right: 0.5em;
+  list-style: none;     /*  リストの前に・をつけない　*/
+  font-size: 15px;
+
+}
+
+/*     
+.h-list {
+  height: 80px;
+  margin-left:auto;
+}
+
+.h-list li {
+  float: right;
+  margin-right: 20px;
+  margin-left: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 80px;
+}
+
+.clear1{
+  clear: both;
+}
+
+.clearfix::after {
+
+  content: "";
+  display: block;
+  clear: both;
+}
+*/
+
+@media screen and (max-width:756px) {
+ 
+	/*　画面サイズが480px以下の場合ここの記述が適用される　*/
+  /*
+  header {}
+  .header-logo {}
+  .header-list {}
+  */
+  
+  .header-list li {
+  
+    display: none; 
+ 
+  }
+
+}
+
+
+@media screen and (max-width:480px) {
+ 
+	/*　画面サイズが480px以下の場合ここの記述が適用される　*/
+  /*
+  header {}
+  .header-logo {}
+  .header-list {}
+  */
+
+  .header-list li {
+  
+    display: none; 
+ 
+  }
+
+}
+
+
+
+
+
+/*---------------------------------------  コンテナ部分  -------------------------------------------- */
+
+.container {
+  
+  width: auto;           /*   100%としないのはボーダーをうまく表示するため　 */
+  margin-left:  5%;      /*   左右に余白を付けて90%表示とする。左 5%　 */
+  margin-right: 5%;      /*   左右に余白を付けて90%表示とする。右 5%　 */
+  margin-top: 100px;     /*   ヘッダー部分固定とするので、その分スクロール領域を多めに取る　　*/
+
+}
+
+.text-area01 {
+
+  width: auto;
+  height:15vh;           /*   表示領域の15%をテキスト領域とする　*/
+
+}
+
+.btn01 {
+
+  margin-top:   2vh;      /*   上に余白を作る　*/
+  padding-top:  0px;
+
+  font-size:    20px;
+  font-weight:  bold; 
+  border-style: groove;
+  border-color: mediumslateblue;
+  border-width: 5px;
+
+/*------------------ テキストをブロック要素の上下左右の中央配置 ------------------*/
+  display: flex;
+  justify-content: center; /*左右中央揃え*/
+  align-items: center;     /*上下中央揃え*/
+/*-----------------------------------------------------------------------------*/
+
+/*  width: 200px; */
+  width:  50%;
+  height: 10vh;
+
+}
+
+.btn02 {
+
+  margin-top:  2vh;      /*   上に余白を作る　*/
+  padding-top: 0px;
+
+  font-size: 20px;
+  font-weight: bold; 
+  border-style: groove;
+  border-color: rgb(241, 14, 14);
+  border-width: 5px;
+
+  text-align: center; 
+
+  width: auto;  
+  height: 10vh; 
+
+}
+
+.btn03 {
+
+  margin-top:    2vh;      /*   上に余白を作る　*/
+  margin-bottom: 2vh;      /*   btn04 で marginが使えない？ので   */
+  padding-top: 0px;
+
+  font-size: 20px;
+  font-weight: bold; 
+  border-style: groove;
+  border-color: rgb(21, 169, 48);
+  border-width: 5px;
+
+  width: auto;  
+  height: 10vh; 
+
+}
+
+.btn04 {
+
+  padding-top: 0px;
+
+  font-size: 50px;
+  font-weight: bold; 
+  border-style: groove;
+  border-color: rgb(219, 131, 15);
+  border-width: 5px;
+  
+  /*-----------------------------  　　要素のセンタリング　margin: 0 auto;  ----------------------------------------------*/
+  margin: 0 auto;
+
+  /*-----------------------------      要素中のテキストのセンタリング　  --------------------------------------------------*/
+  text-align: center; 
+
+  width: 25%; 
+  height: auto;
+  /* height: 30%; */
+
+}
+
+
+  /*-------------------------------     リストに並べて子要素ごとに値をセット　　-------------------------------------------*/
+.Form-title {
+  width:auto;
+  margin-top:    50px;
+  margin-bottom: 50px;
+  font-size:xx-large;
+  text-align: center; 
+}
+.Form-title li {
+  list-style: none;
+}
+.Form-title li:nth-child(2) {
+  font-size:x-large;
+}
+.Form-title li:nth-child(3) {
+  font-size:large;
+}
+
+  /*-------------------------------    イメージ（画像）に値をセット　　--------------------------------------------------*/
+
+.img00 {
+
+  padding-top: 10px;      /*   上に余白を作る　*/
+  width: 20%;
+  /* height: 50%; */ 
+
+}
+
+/*-----  画像を中央配置するには一つ上のブロック要素（親要素）で text-align: center   -----*/
+.img-can {
+
+  text-align: center;
+
+}
+
+.img01, .img02, .img03, .img04 {
+
+  padding-top: 10px;      /*   上に余白を作る　*/
+  width: 15%;
+  /* height: 50%; */ 
+
+}
+
+
+  /*---------------------------    ボタンを表示　　-------------------------------------*/
+
+.in-block {
+
+  /* 　子要素を横に並べる　 */
+  display:flex;
+  /* overflow: hidden;    子要素には  float:left;  */
+
+  /*     要素を中央寄せ     */
+  justify-content: center;
+
+}
+
+.btn_blue {
+
+  /* float:left;          親要素には　overflow: hidden;   */
+
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  margin-right: 10px;
+
+  font-size:    20px;
+  font-weight:  bold; 
+  border-style: groove;
+  border-color: rgb(6, 18, 245);
+  border-width: 5px;
+
+  background-color: wheat;
+
+  display: flex;
+  justify-content: center; /*左右中央揃え*/
+  align-items: center;     /*上下中央揃え*/
+
+}
+
+.btn_blue:hover {
+
+  background-color: sandybrown;
+
+}
+
+.btn_red {
+
+  /* float:left;          親要素には　overflow: hidden;   */
+
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  margin-left: 10px;
+
+  font-size:    20px;
+  font-weight:  bold; 
+  border-style: groove;
+  border-color: rgb(241, 14, 14);
+  border-width: 5px;
+
+  background-color: lime;
+
+  display: flex;
+  justify-content: center; /*左右中央揃え*/
+  align-items: center;     /*上下中央揃え*/
+
+}
+
+.btn_red:hover {
+
+  background-color: mediumseagreen;
+
+}
+
+
+.js-btn01 {
+
+  width:auto;
+  height:50px;
+  margin-bottom: 20px;
+
+}
+
+
+.blk-end {
+
+  width:  auto;
+  height: 10vh;
+  margin-top: 10px;
+
+/*------------------ テキストをブロック要素の上下左右の中央配置 ------------------*/
+  display: flex;
+  justify-content: center; /*左右中央揃え*/
+  align-items: center;     /*上下中央揃え*/
+/*-----------------------------------------------------------------------------*/
+
+  font-size:    20px;
+  font-weight:  bold; 
+  border-style: groove;
+  border-color: rgb(241, 14, 14);
+  border-width: 5px;
+  text-align:   center; 
+
+  margin-bottom: 110px;  /*  スクロール領域を多めに取り、下部分に空白追加。フッター高さより少し大きめとする　*/
+
+}
+
+/*-------------------------------------------  フッター部分  ------------------------------------------ */
+
+footer {
+
+  margin-top: 2vh;  
+  width: 100%;       /*  width: auto としない　*/
+  background-color: #26d0c9;
+
+  position: fixed;    /* フッターを固定する */
+  bottom: 0;          /* 底に固定 */
+  left:   0;
+
+}
+
+.footer-logo {
+
+/*------------------ テキストをブロック要素の上下左右の中央配置 ------------------*/
+  display: flex;
+  justify-content: center; /*左右中央揃え*/
+  align-items: center;     /*上下中央揃え*/
+/*-----------------------------------------------------------------------------*/
+
+  height: 100px;           /*   フッターの高さ 100px  固定とする　*/
+
+  color:rgb(255, 255, 255);
+  font-weight: bold; 
+
+}
+
+/*----------------------  問合せフォーム関連　----------------------------------*/
+.Form {
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  max-width: 720px;
+}
+@media screen and (max-width: 480px) {
+  .Form {
+    margin-top: 40px;
+  }
+}
+
+.Form-Item {
+
+  padding-top: 24px;
+  padding-bottom: 24px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 480px) {
+  .Form-Item {
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    flex-wrap: wrap;
+  }
+}
+
+/*
+.Form-Item:nth-child(5) {
+}
+*/
+
+.Form-Item-Label {
+  width: 100%;
+  max-width: 248px;
+  letter-spacing: 0.05em;
+  font-weight: bold;
+  font-size: 18px;
+}
+@media screen and (max-width: 480px) {
+  .Form-Item-Label {
+    max-width: inherit;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+  }
+}
+
+.Form-Item-Label.isMsg {
+  margin-top: 8px;
+  margin-bottom: auto;
+}
+@media screen and (max-width: 480px) {
+  .Form-Item-Label.isMsg {
+    margin-top: 0;
+  }
+}
+
+.Form-Item-Label-Required {
+  border-radius: 6px;
+  margin-right: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 48px;
+  display: inline-block;
+  text-align: center;
+  background: #545454;
+  color: #fff;
+  font-size: 14px;
+}
+@media screen and (max-width: 480px) {
+  .Form-Item-Label-Required {
+    border-radius: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    width: 32px;
+    font-size: 10px;
+  }
+}
+
+.Form-Item-Input {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-left: 40px;
+  padding-left: 1em;
+  padding-right: 1em;
+  height: 48px;
+  flex: 1;
+  width: 100%;
+  max-width: 410px;
+  background: #eaedf2;
+  font-size: 18px;
+}
+@media screen and (max-width: 480px) {
+  .Form-Item-Input {
+    margin-left: 0;
+    margin-top: 18px;
+    height: 40px;
+    flex: inherit;
+    font-size: 15px;
+  }
+}
+
+.Form-Item-Textarea {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-left: 40px;
+  padding-left: 1em;
+  padding-right: 1em;
+  height: 216px;
+  flex: 1;
+  width: 100%;
+  max-width: 410px;
+  background: #eaedf2;
+  font-size: 18px;
+}
+@media screen and (max-width: 480px) {
+  .Form-Item-Textarea {
+    margin-top: 18px;
+    margin-left: 0;
+    height: 200px;
+    flex: inherit;
+    font-size: 15px;
+  }
+}
+
+.Form-Btn {
+  border-radius: 6px;
+  margin-top: 32px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 280px;
+  display: block;
+  letter-spacing: 0.05em;
+  background: #545454;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+}
+@media screen and (max-width: 480px) {
+  .Form-Btn {
+    margin-top: 24px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 160px;
+    font-size: 16px;
+  }
+}
+
+
+@media screen and (max-width:480px) {
+ 
+	/*　画面サイズが480px以下の場合ここの記述が適用される　*/
+ 
+}
+
